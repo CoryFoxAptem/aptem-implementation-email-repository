@@ -303,21 +303,138 @@ body {
   font-weight: 700;
 }
 
-.guide-email-copy { margin-bottom: 0.7rem; }
+.guide-email-hint {
+  color: #554d76;
+  font-size: 0.84rem;
+  margin: -0.25rem 0 0.75rem;
+}
+
+.guide-email-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.7rem;
+}
+
+.guide-email-copy,
+.guide-email-reset { margin: 0; }
+
+.guide-email-toolbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.guide-editor-button {
+  background: #fff;
+  border: 1px solid #cfc5ed;
+  border-radius: 0.3rem;
+  color: #42337f;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 2rem;
+  padding: 0.4rem 0.55rem;
+}
+
+.guide-editor-button:hover,
+.guide-editor-button:focus-visible {
+  background: #eeeaff;
+  border-color: var(--portal-aqua);
+  color: var(--portal-navy);
+  outline: 0;
+}
 
 .guide-email-body {
   background: #fff;
   border: 1px solid #d8d0f5;
+  box-sizing: border-box;
   border-radius: 0.35rem;
   color: var(--portal-text);
+  display: block;
   font-family: inherit;
   font-size: 0.88rem;
   line-height: 1.55;
   margin: 0;
-  overflow-x: auto;
+  min-height: 20rem;
+  overflow-wrap: break-word;
+  resize: vertical;
+  width: 100%;
   padding: 0.85rem;
-  white-space: pre-wrap;
 }
+
+.guide-email-body:focus {
+  border-color: var(--portal-aqua);
+  box-shadow: 0 0 0 0.2rem rgba(0, 164, 166, 0.2);
+  outline: 0;
+}
+
+.guide-email-body p { margin: 0 0 0.9rem; }
+.guide-email-body p:last-child { margin-bottom: 0; }
+.guide-email-body ul,
+.guide-email-body ol { margin: 0 0 0.9rem; padding-left: 1.4rem; }
+.guide-email-body a { color: #42337f; text-decoration: underline; }
+
+.email-workspace { margin-top: 1rem; }
+
+.email-tabs {
+  border-bottom: 1px solid var(--portal-border);
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.email-tab {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  color: var(--portal-muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.65rem 0.9rem 0.55rem;
+}
+
+.email-tab:hover,
+.email-tab:focus { color: var(--portal-navy); }
+
+.email-tab:focus-visible {
+  outline: 3px solid rgba(0, 164, 166, 0.6);
+  outline-offset: -2px;
+}
+
+.email-tab.active { border-bottom-color: var(--portal-aqua); color: var(--portal-navy); }
+
+.fourfour-card {
+  background: #f2fbf8;
+  border-color: #78c8b4;
+  border-left: 4px solid #00a486;
+}
+
+.fourfour-card .guide-card-title { color: #007760; }
+.fourfour-copy { color: #245b52; font-size: 0.9rem; margin: 0 0 0.85rem; max-width: 46rem; }
+.fourfour-upload-label { cursor: pointer; margin: 0; }
+
+.fourfour-status {
+  color: var(--portal-muted);
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0;
+}
+
+.fourfour-status.is-error { color: #8a0000; font-weight: 700; }
+
+.fourfour-details {
+  border-top: 1px solid rgba(0, 119, 96, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.9rem;
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
+}
+
+.fourfour-details p { color: #245b52; flex: 1 1 100%; font-size: 0.88rem; margin: 0; }
+.fourfour-details a { font-size: 0.86rem; font-weight: 700; }
 
 .offcanvas.portal-offcanvas { color: #fff; width: min(86vw, 22rem); }
 .portal-offcanvas .offcanvas-header { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
